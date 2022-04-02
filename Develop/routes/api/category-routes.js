@@ -5,7 +5,7 @@ const { Category, Product } = require('../../models');
 
 router.get('/', async (req, res) => {
 try {
-     const category = await Category.findAll();
+     const categoryData = await Category.findAll();
      res.status(200) = json(categoryData);
      } catch (err) {
      res.status(500).json(err);
